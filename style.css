@@ -1,0 +1,102 @@
+:root {
+  font-size: 62.5%;
+  --color-p1: #0b6300;
+  --color-p2: #175e90;
+  --color-p3: #0047aa;
+  --color-p4: #fff;
+  --color-c1: #222;
+  --color-c2: #333;
+  --color-c3: #5e5e5e;
+  --max-width-block: 45rem;
+  --gap-size: max(0.5rem, 0.8vw);
+  --fs-keyboard: max(2.5rem, 5vh);
+  --padding-block: var(--gap-size);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  max-width: var(--max-width-block);
+  min-height: 100vh;
+  background-color: var(--color-c1);
+  margin: 0 auto;
+}
+.screen {
+  display: grid;
+  background-color: var(--color-c3);
+  text-align: right;
+  font-size: var(--font-size);
+  padding: var(--padding-block);
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+.screen__input {
+  width: 100%;
+  color: var(--color-p4);
+  text-align: right;
+  font-size: 6.5rem;
+  border: none;
+  background-color: transparent;
+}
+.screen__input:focus {
+  outline: none;
+}
+.keyboard {
+  gap: var(--gap-size);
+  padding: var(--padding-block);
+  font-size: var(--fs-keyboard);
+}
+.keyboard__row:not(:first-child) {
+  margin-top: var(--gap-size);
+}
+.keyboard__row {
+  display: flex;
+  gap: var(--gap-size);
+}
+.row__btn {
+  position: relative;
+  display: grid;
+  place-content: center center;
+  flex: 1;
+  font-size: inherit;
+  padding: 1.5rem max(1rem, 1vw);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.row__btn > :first-child {
+  pointer-events: none;
+}
+.row__btn:active {
+  border-radius: 20px;
+}
+.row__btn[data-comma] > :first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.row__btn > svg {
+  height: var(--fs-keyboard);
+  width: var(--fs-keyboard);
+}
+:is(.row__btn--p1, .row__btn--p2, .row__btn--p3, .row__btn--c2) {
+  color: var(--color-p4);
+}
+.row__btn--p1 {
+  background-color: var(--color-p1);
+}
+.row__btn--p2 {
+  background-color: var(--color-p2);
+}
+.row__btn--p3 {
+  background-color: var(--color-p3);
+}
+.row__btn--c2 {
+  background-color: var(--color-c2);
+  fill: var(--color-p4);
+}
