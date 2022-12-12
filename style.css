@@ -17,6 +17,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 main {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -43,6 +46,10 @@ main {
 }
 .screen__input:focus {
   outline: none;
+}
+.screen__result {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 .keyboard {
   gap: var(--gap-size);
