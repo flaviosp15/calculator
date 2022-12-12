@@ -30,6 +30,7 @@ main {
 }
 .screen {
   display: grid;
+  align-items: center;
   background-color: var(--color-c3);
   text-align: right;
   font-size: var(--font-size);
@@ -38,6 +39,14 @@ main {
 }
 .screen__options {
   fill: var(--color-p4);
+}
+.options__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.options__btn > svg {
+  pointer-events: none;
 }
 .screen__input {
   width: 100%;
