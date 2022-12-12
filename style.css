@@ -36,6 +36,9 @@ main {
   padding: var(--padding-block);
   border-radius: 0 0 1.5rem 1.5rem;
 }
+.screen__options {
+  fill: var(--color-p4);
+}
 .screen__input {
   width: 100%;
   color: var(--color-p4);
