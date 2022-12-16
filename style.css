@@ -55,6 +55,8 @@ main {
   font-size: 6.5rem;
   border: none;
   background-color: transparent;
+  caret-color: transparent;
+  pointer-events: none;
 }
 .screen__input:focus {
   outline: none;
