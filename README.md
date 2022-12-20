@@ -1,2 +1,2 @@
 # calculator
-That calculator was made with HTML, CSS and JS
+That calculator was made with HTML, CSS and JS. (unfinished)
